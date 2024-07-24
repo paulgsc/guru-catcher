@@ -1,12 +1,14 @@
-import FloatingBadge from "@/components/floating-badge";
-import { Hero } from "@/components/hero";
-import PageWrapper from "@/components/wrapper/page-wrapper";
+import FloatingBadge from "@/components/floating-badge"
+import { Hero } from "@/components/hero"
+import PageWrapper from "@/components/wrapper/page-wrapper"
 
-export default function Home() {
+const Home = (): JSX.Element => {
   return (
     <PageWrapper>
       <Hero />
       <FloatingBadge />
     </PageWrapper>
-  );
+  )
 }
+
+export default Home
