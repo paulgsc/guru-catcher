@@ -1,0 +1,7 @@
+# Navigate to the subdirectory and run lint-staged
+
+# npx lint-staged
+
+# Verify TypeScript files in subdirectories
+
+# npx tsc --build apps/guru

@@ -1,0 +1,101 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalEnv": ["NODE_ENV"],
+    "tasks": {
+      "build": {
+        "dependsOn": ["^build"],
+        "env": [
+          "WWW_SERVER_URL",
+          "NEXT_PUBLIC_APP_URL",
+          "DB_URL",
+          "DRIZZLE_DB_URL",
+          "JWT_SECRET"
+        ],
+        "outputs": ["dist/**", ".next/**"]
+      },
+      "preview": {
+        "env": [
+          "WWW_SERVER_URL",
+          "NEXT_PUBLIC_APP_URL",
+          "DB_URL",
+          "DRIZZLE_DB_URL",
+          "JWT_SECRET"
+        ],
+        "outputs": ["dist/**", ".next/**"]
+      },
+      "start": {
+        "dependsOn": ["^build"]
+      },
+      "lint": {
+        "cache": false
+      },
+      "lint:fix": {
+        "cache": false,
+        "outputs": []
+      },
+      "lint:js": {
+        "cache": false,
+        "outputs": []
+      },
+      "lint:md": {
+        "cache": false,
+        "outputs": []
+      },
+      "lint:vercel": {
+        "cache": false,
+        "outputs": []
+      },
+      "prettier": {
+        "cache": false
+      },
+      "format:check": {
+        "cache": false,
+        "outputs": []
+      },
+      "format:write": {
+        "cache": false,
+        "outputs": []
+      },
+      "typecheck": {},
+      "dev": {
+        "cache": false
+      },
+      "check": {
+        "cache": false
+      },
+      "test": {
+        "cache": false,
+        "outputs": []
+      },
+      "db:studio": {
+        "cache": false,
+        "env": [
+          "WWW_SERVER_URL",
+          "NEXT_PUBLIC_APP_URL",
+          "DB_URL",
+          "DRIZZLE_DB_URL",
+          "JWT_SECRET"
+        ]
+      },
+      "db:push": {
+        "cache": false,
+        "env": [
+          "WWW_SERVER_URL",
+          "NEXT_PUBLIC_APP_URL",
+          "DB_URL",
+          "DRIZZLE_DB_URL",
+          "JWT_SECRET"
+        ]
+      },
+      "db:generate": {
+        "cache": false,
+        "env": [
+          "WWW_SERVER_URL",
+          "NEXT_PUBLIC_APP_URL",
+          "DB_URL",
+          "DRIZZLE_DB_URL",
+          "JWT_SECRET"
+        ]
+      }
+    }
+  }
