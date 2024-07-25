@@ -200,7 +200,9 @@ export default tseslint.config(
           ignorePrimitives: true,
         },
       ],
-
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
       // eslint-plugin-unicorn
       "unicorn/no-typeof-undefined": "error",
       // make sure we're not leveraging any deprecated APIs
